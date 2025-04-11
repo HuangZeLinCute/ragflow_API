@@ -33,7 +33,9 @@ The service will start at http://localhost:8000. You can visit http://localhost:
 ### 1. Knowledge Base Management
 
 #### Upload File  
+
 POST /knowledge-base/{user_id}/upload  
+
 ```json
 // Use multipart/form-data
 {
@@ -42,12 +44,15 @@ POST /knowledge-base/{user_id}/upload
 ```
 
 #### Delete Document  
+
 DELETE /knowledge-base/{user_id}/documents/{doc_name}
 
 ### 2. Assistant Management
 
 #### Create Assistant  
+
 POST /assistants  
+
 ```json
 {
   "user_id": "user123",
@@ -57,15 +62,19 @@ POST /assistants
 ```
 
 #### Get All Assistants of a User  
+
 GET /assistants/{user_id}
 
 #### Delete Assistant  
+
 DELETE /assistants/{assistant_name}
 
 ### 3. Session Management
 
 #### Create Session  
+
 POST /sessions  
+
 ```json
 {
   "assistant_name": "my_assistant",
@@ -74,15 +83,19 @@ POST /sessions
 ```
 
 #### Get All Sessions of an Assistant  
+
 GET /sessions/{assistant_name}
 
 #### Delete Session  
+
 DELETE /sessions/{assistant_name}/{session_name}
 
 ### 4. Chat Interaction
 
 #### Send Message  
+
 POST /chat  
+
 ```json
 {
   "assistant_name": "my_assistant",
@@ -94,6 +107,7 @@ POST /chat
 ## Request Examples
 
 ### Using curl
+
 ```bash
 # Upload File
 curl -X POST "http://localhost:8000/knowledge-base/user123/upload" \
@@ -129,6 +143,7 @@ curl -X POST "http://localhost:8000/chat" \
 ```
 
 ### Using Python requests
+
 ```python
 import requests
 import json
@@ -168,7 +183,7 @@ response = requests.post('http://localhost:8000/chat', json=data)
 3. Chat messages support streaming responses, returning the complete reply content.
 4. Make sure the RAGFlow service is running (default address: http://localhost:9380)
 
-# English Documentation
+# China Documentation
 
 For detailed English documentation, please refer to [README_CN.md](README_CN.md).
 
