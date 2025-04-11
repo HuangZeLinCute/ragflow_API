@@ -27,6 +27,7 @@ uv pip install -r requirements.txt
 # 启动服务
 python api.py
 ```
+
 服务将在 http://localhost:8000 启动，可以访问 http://localhost:8000/docs 查看交互式API文档。
 
 ## API 使用示例
@@ -34,7 +35,9 @@ python api.py
 ### 1. 知识库管理
 
 #### 上传文件
+
 POST /knowledge-base/{user_id}/upload
+
 ```json
 // 使用 multipart/form-data
 {
@@ -43,12 +46,15 @@ POST /knowledge-base/{user_id}/upload
 ```
 
 #### 删除文档
+
 DELETE /knowledge-base/{user_id}/documents/{doc_name}
 
 ### 2. 聊天助手管理
 
 #### 创建助手
+
 POST /assistants
+
 ```json
 {
   "user_id": "user123",
@@ -58,15 +64,19 @@ POST /assistants
 ```
 
 #### 获取用户的所有助手
+
 GET /assistants/{user_id}
 
 #### 删除助手
+
 DELETE /assistants/{assistant_name}
 
 ### 3. 会话管理
 
 #### 创建会话
+
 POST /sessions
+
 ```json
 {
   "assistant_name": "my_assistant",
@@ -75,15 +85,19 @@ POST /sessions
 ```
 
 #### 获取助手的所有会话
+
 GET /sessions/{assistant_name}
 
 #### 删除会话
+
 DELETE /sessions/{assistant_name}/{session_name}
 
 ### 4. 聊天交互
 
 #### 发送消息
+
 POST /chat
+
 ```json
 {
   "assistant_name": "my_assistant",
@@ -95,6 +109,7 @@ POST /chat
 ## 请求示例
 
 ### 使用curl
+
 ```bash
 # 上传文件
 curl -X POST "http://localhost:8000/knowledge-base/user123/upload" \
@@ -130,6 +145,7 @@ curl -X POST "http://localhost:8000/chat" \
 ```
 
 ### 使用Python requests
+
 ```python
 import requests
 import json
@@ -168,10 +184,6 @@ response = requests.post('http://localhost:8000/chat', json=data)
 2. 文件上传支持PDF、TXT、DOC、DOCX格式
 3. 聊天消息支持流式响应，返回的是完整的回答内容
 4. 所有API都需要确保RAGFlow服务正在运行（默认地址：http://localhost:9380） 
-
-# 英文文档
-
-有关详细的英文文档，请参阅 [README_EN.md](README_EN.md)。
 
 # 未来更新
 
