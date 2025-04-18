@@ -3,7 +3,7 @@ from assistant import ChatAssistantManager
 
 
 if __name__ == "__main__":
-    kb = KnowledgeBase(api_key="ragflow-M3Nzk5NWRjMTRmZjExZjBiMGJmMDI0Mm", base_url="http://localhost:9380")
+    kb = KnowledgeBase(api_key="your-api_key", base_url="http://localhost:9380")
     user_id = "123"
     doc_name = "test.pdf"
     # dataset = kb.upload_file(user_id, "test.pdf")  # 上传后获取 dataset
