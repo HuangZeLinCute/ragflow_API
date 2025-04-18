@@ -1,3 +1,4 @@
+# This is test file
 from knowledge_base import KnowledgeBase
 from assistant import ChatAssistantManager
 
