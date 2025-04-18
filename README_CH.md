@@ -28,6 +28,8 @@ uv pip install -r requirements.txt
 python api.py
 ```
 
+首先在api.py文件下配置你的api_key和ragflow_url。
+
 服务将在 http://localhost:8000 启动，可以访问 http://localhost:8000/docs 查看交互式API文档。
 
 ## API 使用示例
