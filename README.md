@@ -26,6 +26,8 @@ uv pip install -r requirements.txt
 python api.py
 ```
 
+First, configure your api_key and ragflow_url in the api.py file.
+
 The service will start at http://localhost:8000. You can visit http://localhost:8000/docs to see the interactive API documentation.
 
 ## API Usage Examples
