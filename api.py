@@ -83,7 +83,7 @@ async def delete_document(
         raise HTTPException(status_code=400, detail=str(e))
 
 # 2. 聊天助手相关API
-@app.post("/assistants")
+@app.post("/assistants/{user_id}")
 async def create_assistant(
     user_id: str,
     assistant_data: AssistantCreate,
